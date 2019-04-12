@@ -1,6 +1,8 @@
 package dominio.test;
-
+import junit.framework.Test;
 import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import dominio.Cuenta;
 
 public class CuentaTester1 extends TestCase{
 
@@ -46,7 +48,7 @@ public class CuentaTester1 extends TestCase{
 	
 	public static void main(String[] args) {
 		
-		junit.swingi.TestRunner.run(CuentaTester1.class);
+		junit.swingui.TestRunner.run(CuentaTester1.class);
 	}
 	
 	

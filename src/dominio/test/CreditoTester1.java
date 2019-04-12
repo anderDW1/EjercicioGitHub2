@@ -1,13 +1,11 @@
 package dominio.test;
 
 import java.util.Date;
-
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
+import junit.framework.Test;
 import junit.framework.TestCase;
-
+import junit.framework.TestSuite;
+import dominio.Credito;
+import dominio.Cuenta;
 class CreditoTester1 extends TestCase{
 
 	

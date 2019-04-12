@@ -1,8 +1,9 @@
 package dominio.test;
 
+import dominio.Tarjeta;
 import junit.framework.TestCase;
 
-public class TarjetaTester1 extends TestCase{
+public abstract class TarjetaTester1 extends TestCase{
 
 	
 	

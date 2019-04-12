@@ -1,12 +1,10 @@
 package dominio.test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Date;
-
-import org.junit.jupiter.api.Test;
-
+import junit.framework.Test;
 import junit.framework.TestCase;
+import junit.framework.TestSuite;
+import dominio.Debito;
+import java.util.Date;
 
 class DebitoTester1  extends TestCase{
 
@@ -26,7 +24,7 @@ class DebitoTester1  extends TestCase{
 		Date hoy=new Date();
 		long tiempo=Long.parseLong("12096000000");
 		Date fecha=new Date(hoy.getTime()+tiempo);//Caduca en 4 años
-		tarjeta=new Credito("1234567890123456", "Fulano de Tal", fecha, 1000.0); //1000€ de credito
+		tarjeta=new Debito("1234567890123456", "Fulano de Tal", fecha, 1000.0); 
 		tarjeta.setCuenta(cuenta);
 
 		
@@ -48,7 +46,7 @@ class DebitoTester1  extends TestCase{
 	
 	public static void main(String[] args) {
 		
-		junit.swingi.TestRunner.run(CuentaTester1.class);
+		junit.swingui.TestRunner.run(CuentaTester1.class);
 	}
 	
 	
