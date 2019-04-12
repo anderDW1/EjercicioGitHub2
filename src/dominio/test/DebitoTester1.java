@@ -3,6 +3,7 @@ package dominio.test;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import dominio.Cuenta;
 import dominio.Debito;
 import java.util.Date;
 
