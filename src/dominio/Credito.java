@@ -3,13 +3,14 @@ package dominio;
 import java.util.Date;
 import java.util.Vector;
 
+
 public class Credito extends Tarjeta{
 
 	protected double mCredito;
 	protected Vector mMovimientos;
 	
 	public Credito(String numero, String titular, Date fechaCaducidad, double credito) {
-		super(numero, titular, fechaCaducidad);
+		super(numero,titular,fechaCaducidad);
 		mCredito = credito;
 		mMovimientos = new Vector();
 	}
@@ -74,14 +75,6 @@ public class Credito extends Tarjeta{
 		
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 }

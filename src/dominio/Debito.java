@@ -1,6 +1,8 @@
 package dominio;
 
-public class Debito {
+import java.util.Date;
+
+public class Debito extends Tarjeta{
 
 	public Debito(String numero, String titular, Date fechaCaducidad) {
 		super(numero, titular, fechaCaducidad);
@@ -8,7 +10,7 @@ public class Debito {
 	
 	
 	public void retirar(double x) throws Exception{
-		this.mCuentaAsocida.retirar("Retirada en cajero automática", x);
+		this.mCuentaAsociada.retirar("Retirada en cajero automática", x);
 	}
 	
 	
