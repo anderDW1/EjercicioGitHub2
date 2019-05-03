@@ -10,7 +10,11 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import dominio.Credito;
 import dominio.Cuenta;
-
+/**
+ * 
+ * @author Xabier
+ *
+ */
 public class CreditoTester1 extends TestCase{
 
 	
@@ -24,7 +28,10 @@ public class CreditoTester1 extends TestCase{
 		
 	}
 	
-	
+	/**
+	 * Metodo
+	 * 
+	 */
 	public void setUp() throws Exception
 	{
 		
