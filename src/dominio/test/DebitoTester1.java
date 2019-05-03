@@ -8,7 +8,11 @@ import dominio.Debito;
 import java.util.Date;
 
 import org.junit.jupiter.api.Assertions;
-
+/**
+ * 
+ * @author Xabier
+ *
+ */
 public class DebitoTester1  extends TestCase{
 
 	Debito debito;

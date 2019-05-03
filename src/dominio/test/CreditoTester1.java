@@ -29,7 +29,7 @@ public class CreditoTester1 extends TestCase{
 	}
 	
 	/**
-	 * Metodo
+	 * Metodo para
 	 * 
 	 */
 	public void setUp() throws Exception
