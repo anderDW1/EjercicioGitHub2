@@ -1,21 +1,26 @@
 package dominio.test;
 
 import java.util.Date;
+
+
+import org.junit.jupiter.api.Assertions;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import dominio.Credito;
 import dominio.Cuenta;
-class CreditoTester1 extends TestCase{
+
+public class CreditoTester1 extends TestCase{
 
 	
 	Cuenta cuenta;
 	Credito tarjeta;
 	
-	public CreditoTester1()
+	public CreditoTester1(String sTestName)
 	{
 		
-		super(STestName);
+		super(sTestName);
 		
 	}
 	
@@ -41,33 +46,38 @@ class CreditoTester1 extends TestCase{
 		
 	}
 	
-	public void testIngresar500()
+
+	public void testIngresar500() throws Exception
 	{
-		
-		
+
+		tarjeta.ingresar(500);
+		Assertions.assertEquals(tarjeta.getSaldo(),500);
+
 		
 	}
-	public void testRetirar300()
+	
+	
+	public void testRetirar300() throws Exception
 	{
-		
-		
-		
+
+		tarjeta.retirar(200);
+		Assertions.assertEquals(tarjeta.getCreditoDisponible(),990);
 	}
 	
 	
 	public void testLiquidar()
 	{
 		
-		
-		
+		tarjeta.liquidar(5, 2019);
+		Assertions.assertEquals(tarjeta.getSaldo(),0);
 		
 	}
 	
 	public static void main(String args[])
 	{
 		
-		junit.swingui.TestRunner.run(CreditoTester1.class);
-		
+		//junit.swingui.TestRunner.run(CreditoTester1.class);
+		 junit.textui.TestRunner.run(CreditoTester1.class);
 		
 		
 	}
