@@ -7,7 +7,9 @@ import dominio.Cuenta;
 import dominio.Debito;
 import java.util.Date;
 
-class DebitoTester1  extends TestCase{
+import org.junit.jupiter.api.Assertions;
+
+public class DebitoTester1  extends TestCase{
 
 	Debito debito;
 	Cuenta cuenta;
@@ -24,9 +26,9 @@ class DebitoTester1  extends TestCase{
 		cuenta.ingresar(1000.0);
 		Date hoy=new Date();
 		long tiempo=Long.parseLong("12096000000");
-		Date fecha=new Date(hoy.getTime()+tiempo);//Caduca en 4 años
-		tarjeta=new Debito("1234567890123456", "Fulano de Tal", fecha, 1000.0); 
-		tarjeta.setCuenta(cuenta);
+		Date fecha=new Date(hoy.getTime()+tiempo);  //Caduca en 4 años
+		debito=new Debito("1234567890123456", "Fulano de Tal", fecha); 
+		debito.setCuenta(cuenta);
 
 		
 	}
@@ -37,17 +39,36 @@ class DebitoTester1  extends TestCase{
 		
 	}
 	
-	public void testRetirar1000()
+	public void testRetirar700() throws Exception
 	{
 		
-		
-		
+		debito.retirar(700);
+		Assertions.assertEquals(debito.getSaldo(),300);
 		
 	}
 	
+
+	public void testIngresar200() throws Exception
+	{
+		
+		debito.ingresar(200);
+		Assertions.assertEquals(debito.getSaldo(),1200);
+
+		
+	}
+	
+	public void testPagoEnEstablecimiento100() throws Exception
+	{
+		debito.pagoEnEstablecimiento("Jamon", 200);
+		
+		Assertions.assertEquals(debito.getSaldo(),800);
+		
+	}
+
 	public static void main(String[] args) {
 		
-		junit.swingui.TestRunner.run(CuentaTester1.class);
+		//junit.swingui.TestRunner.run(CuentaTester1.class);
+		junit.textui.TestRunner.run(DebitoTester1.class);
 	}
 	
 	

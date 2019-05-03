@@ -33,6 +33,7 @@ public class Credito extends Tarjeta{
 		m.setImporte(x);
 		mMovimientos.addElement(m);
 		mCuentaAsociada.ingresar(x);
+		
 	}
 	
 	public void pagoEnEstablecimiento(String datos, double x) throws Exception {
