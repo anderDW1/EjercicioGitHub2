@@ -11,7 +11,7 @@ import junit.framework.TestSuite;
 import dominio.Credito;
 import dominio.Cuenta;
 /**
- * 
+ * Metodos para testear la clase Credito
  * @author Xabier
  *
  */
@@ -29,7 +29,7 @@ public class CreditoTester1 extends TestCase{
 	}
 	
 	/**
-	 * Metodo para
+	 * Metodo para inicializar una cuenta y una tarjeta
 	 * 
 	 */
 	public void setUp() throws Exception
