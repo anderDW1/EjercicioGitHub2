@@ -5,7 +5,7 @@ import java.util.Vector;
  * Clase Cuenta
  * @author Ander Ezekiel
  *
- */
+ */ 
 public class Cuenta {
 
 	protected String mNumero;

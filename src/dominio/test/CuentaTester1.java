@@ -13,7 +13,7 @@ import dominio.Cuenta;
  */
 public class CuentaTester1 extends TestCase{
 
-	Cuenta cuenta;
+	Cuenta cuenta; 
 	
 	
 	public CuentaTester1(String sTestName)
