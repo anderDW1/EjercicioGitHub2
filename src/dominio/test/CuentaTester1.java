@@ -23,10 +23,12 @@ public class CuentaTester1 extends TestCase{
 		
 		
 	}
+	
 	/**
 	 * Metodo para inicializar una cuenta para realizar los JUnit
 	 * 
 	 */
+	
 	public void setUp() throws Exception
 	{
 		
@@ -42,18 +44,29 @@ public class CuentaTester1 extends TestCase{
 		
 	}
 	
-	
+	/**
+	 * Prueba de JUnit para testear el metodo Ingresar de la clase Cuenta
+	 * @throws Exception
+	 */
 	public void testIngresar1000() throws Exception 
 	{
 		cuenta.ingresar(1000);
 		Assertions.assertEquals(cuenta.getSaldo(),2000);
 		
 	}
+	/**
+	 * Prueba de JUnit para testear el metodo Retirar de la clase Cuenta
+	 * @throws Exception
+	 */
 	public void testRetirar1000() throws Exception 
 	{
 		cuenta.retirar(1000);
 		Assertions.assertEquals(cuenta.getSaldo(),0);
 	}
+	/**
+	 * Prueba de JUnit para testear el metodo Ingresar y Retirar a la vez de la clase Cuenta
+	 * @throws Exception
+	 */
 	public void testIngresoYRetirada() throws Exception 
 	{
 		cuenta.ingresar(1000);
