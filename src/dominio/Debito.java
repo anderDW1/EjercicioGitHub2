@@ -15,7 +15,7 @@ public class Debito extends Tarjeta{
 	
 	/**
 	 * Metodo retirar que recibe una cantidad a retirar y muestra un mensaje con la cantidad retirada
-	 * 
+	 * @param x es el operador 
 	 */
 	public void retirar(double x) throws Exception{
 		this.mCuentaAsociada.retirar("Retirada en cajero automática", x);

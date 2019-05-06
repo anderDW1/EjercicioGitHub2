@@ -9,7 +9,7 @@ import java.util.Date;
 
 import org.junit.jupiter.api.Assertions;
 /**
- * 
+ * JUnits para testear la clase Debito
  * @author Xabier
  *
  */
