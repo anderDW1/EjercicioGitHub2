@@ -6,7 +6,11 @@ import junit.framework.TestSuite;
 import org.junit.jupiter.api.Assertions;
 
 import dominio.Cuenta;
-
+/**
+ * JUnits para testear la clase Cuenta
+ * @author Xabier
+ *
+ */
 public class CuentaTester1 extends TestCase{
 
 	Cuenta cuenta;
@@ -19,7 +23,10 @@ public class CuentaTester1 extends TestCase{
 		
 		
 	}
-	
+	/**
+	 * Metodo para inicializar una cuenta para realizar los JUnit
+	 * 
+	 */
 	public void setUp() throws Exception
 	{
 		
@@ -34,6 +41,8 @@ public class CuentaTester1 extends TestCase{
 		
 		
 	}
+	
+	
 	public void testIngresar1000() throws Exception 
 	{
 		cuenta.ingresar(1000);

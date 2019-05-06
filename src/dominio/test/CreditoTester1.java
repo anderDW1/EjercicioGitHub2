@@ -11,7 +11,7 @@ import junit.framework.TestSuite;
 import dominio.Credito;
 import dominio.Cuenta;
 /**
- * Metodos para testear la clase Credito
+ * JUnits para testear la clase Credito
  * @author Xabier
  *
  */
@@ -29,7 +29,7 @@ public class CreditoTester1 extends TestCase{
 	}
 	
 	/**
-	 * Metodo para inicializar una cuenta y una tarjeta
+	 * Metodo para inicializar una cuenta y una tarjeta para realizar los JUnit
 	 * 
 	 */
 	public void setUp() throws Exception
@@ -53,6 +53,10 @@ public class CreditoTester1 extends TestCase{
 		
 	}
 	
+	/**
+	 * Prueba de JUnit para testear el metodo Ingresar de la clase Credito
+	 * @throws Exception
+	 */
 
 	public void testIngresar500() throws Exception
 	{
@@ -63,7 +67,10 @@ public class CreditoTester1 extends TestCase{
 		
 	}
 	
-	
+	/**
+	 * Prueba de JUnit para testear el metodo Retirar de la clase Credito
+	 * @throws Exception
+	 */
 	public void testRetirar300() throws Exception
 	{
 
@@ -71,7 +78,10 @@ public class CreditoTester1 extends TestCase{
 		Assertions.assertEquals(tarjeta.getCreditoDisponible(),990);
 	}
 	
-	
+	/**
+	 * Prueba de JUnit para testear el metodo Liquidar de la clase Credito
+	 * @throws Exception
+	 */
 	public void testLiquidar()
 	{
 		
@@ -80,6 +90,7 @@ public class CreditoTester1 extends TestCase{
 		
 	}
 	
+
 	public static void main(String args[])
 	{
 		

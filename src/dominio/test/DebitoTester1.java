@@ -24,6 +24,9 @@ public class DebitoTester1  extends TestCase{
 		super(sTestName);
 		
 	}
+	/**
+	 * Metodo para inicializar una cuenta y una tarjeta de debito para realizar los JUnit
+	 */
 	public void setUp() throws Exception
 	{
 		cuenta=new Cuenta("0001.0002.12.1234567890","Fulano de tal");
@@ -44,6 +47,10 @@ public class DebitoTester1  extends TestCase{
 		
 	}
 	
+	/**
+	 * Prueba de JUnit para testear el metodo Liquidar de la clase Credito
+	 * @throws Exception
+	 */
 	public void testRetirar700() throws Exception
 	{
 		
@@ -52,7 +59,10 @@ public class DebitoTester1  extends TestCase{
 		
 	}
 	
-
+	/**
+	 * Prueba de JUnit para testear el metodo Liquidar de la clase Credito
+	 * @throws Exception
+	 */
 	public void testIngresar200() throws Exception
 	{
 		
@@ -61,7 +71,10 @@ public class DebitoTester1  extends TestCase{
 
 		
 	}
-	
+	/**
+	 * Prueba de JUnit para testear el metodo Liquidar de la clase Credito
+	 * @throws Exception
+	 */
 	public void testPagoEnEstablecimiento100() throws Exception
 	{
 		debito.pagoEnEstablecimiento("Jamon", 200);
