@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import dominio.Cuenta;
 /**
  * JUnits para testear la clase Cuenta
- * @author Xabier
+ * @author JAVADOC: Xabier JUNIT: Ander
  *
  */
 public class CuentaTester1 extends TestCase{

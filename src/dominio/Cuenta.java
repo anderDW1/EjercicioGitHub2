@@ -1,13 +1,22 @@
 package dominio;
 
 import java.util.Vector;
-
+/**
+ * Clase Cuenta
+ * @author Ander Ezekiel
+ *
+ */
 public class Cuenta {
 
 	protected String mNumero;
-	protected String mTitular;
+	protected String mTitular; 
 	protected Vector mMovimientos;
 	
+	/**
+	 * Contructor para crear una cuenta
+	 * @param numero
+	 * @param titular
+	 */
 	public Cuenta(String numero, String titular) {
 	
 		mNumero = numero;
@@ -16,6 +25,12 @@ public class Cuenta {
 	}
 	
 	
+	/**
+	 * Método ingresar, ingresa la cantidad pasada como parametro
+	 * @param x
+	 * @throws Exception
+	 * @return ingresa la cantidad pasada como parametro en la cuenta
+	 */
 	public void ingresar (double x) throws Exception {
 		
 		if(x<=0)
@@ -27,6 +42,12 @@ public class Cuenta {
 	}
 	
 	
+	/**
+	 * Método retirar, retira la cantidad pasada como parametro
+	 * @param x
+	 * @throws Exception
+	 * @return "No se puede retirar una cantidad negativa" en caso de que la cantidad sea negativa, "Retirada de efectivo" en caso de que se haya retirado con exito y "Saldo insuficiente" en caso de no haber saldo suficiente
+	 */
 	public void retirar(double x) throws Exception {
 		
 		if(x<=0)
@@ -40,6 +61,13 @@ public class Cuenta {
 	}
 	
 	
+	/**
+	 * Método ingresar, ingresa la cantidad y el concepto pasado como parametro
+	 * @param concepto
+	 * @param x
+	 * @throws Exception
+	 * @return "No se puede retirar una cantidad negativa" en caso de que la cantidad sea negativa, sino realiza el ingreso con el concepto pasado como parametro
+	 */
 	public void ingresar(String concepto, double x) throws Exception {
 		
 		if(x<=0)
@@ -50,7 +78,13 @@ public class Cuenta {
 		this.mMovimientos.addElement(m);
 	}
 	
-	
+	/**
+	 * Método retirar, retira la cantidad pasada como parametro pero con un concepto
+	 * @param concepto
+	 * @param x
+	 * @throws Exception
+	 * @return "No se puede retirar una cantidad negativa" en caso de que la cantidad sea negativa, "Retirada de efectivo" en caso de que se haya retirado con exito, en caso de que ninguna de las dos anteriores se hayan cumplido retira la cantidad recibida con el concepto pasado como parametro
+	 */
 	public void retirar(String concepto, double x)  throws Exception {
 		
 		if(x<=0)
@@ -64,6 +98,10 @@ public class Cuenta {
 	}
 	
 	
+	/**
+	 * Método para obtener el saldo de la tarjeta
+	 * @return devuelve el saldo 
+	 */
 	public double getSaldo() {
 		
 		double r=0.0;
@@ -76,6 +114,10 @@ public class Cuenta {
 	}
 	
 	
+	/**
+	 * Método para añadir un movimiento
+	 * @param m
+	 */
 	public void addMovimiento(Movimiento m) {
 		
 		mMovimientos.addElement(m);
@@ -93,3 +135,4 @@ public class Cuenta {
 	
 	
 }
+
