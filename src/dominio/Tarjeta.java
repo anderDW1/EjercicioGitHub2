@@ -2,23 +2,26 @@ package dominio;
 
 import java.util.Date;
 
+/**
+ * Clase Tarjeta
+ * @author Ander Ezekiel
+ *
+ */
+
 public abstract class Tarjeta {
 
 	
 	protected String nNumero, mTitular;
 	protected Date mFechaDeCaducidad;
 	
-	
-	/**
-	 * Comment here
-	 * @param args
-	 */
-	
-	
-	
-	
 	protected Cuenta mCuentaAsociada;
 	
+	/**
+	 * Constructor de la clase Tarjeta
+	 * @param numero
+	 * @param titular
+	 * @param fechaCaducidad
+	 */
 	public Tarjeta(String numero, String titular, Date fechaCaducidad)
 	{
 		nNumero=numero;
@@ -27,12 +30,14 @@ public abstract class Tarjeta {
 	
 	}
 	
+	
+	/**
+	 * Método que establece una cuenta con la cuenta que se pasa como parametro
+	 * @param c
+	 */
 	public void setCuenta(Cuenta c)
 	{
-		
-		mCuentaAsociada=c;
-		
-		
+		mCuentaAsociada=c;	
 	}
 	
 	

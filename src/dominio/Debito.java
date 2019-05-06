@@ -1,6 +1,11 @@
 package dominio;
 
 import java.util.Date;
+/**
+ * Clase Debito
+ * @author Xabier
+ *
+ */
 
 public class Debito extends Tarjeta{
 /**
